@@ -1,0 +1,13 @@
+models/*.dat
+models/*.h5
+data/*.csv
+
+.vscode
+open_images_annotation.code-workspace
+
+trainers/build
+trainers/dlib_inputs
+
+annotate/*.cache
+
+__pycache__

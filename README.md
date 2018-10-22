@@ -61,6 +61,8 @@ Run `python fetch.py --annotations` to get the latest annotation set for each mo
 
 ## Tools
 
+![](doc/reviewer.jpg)
+
 These are all still specialised for human faces. Some work is required before they can become general
 annotation tools. The code structure is attempting to remain general, but for now it's easier to implement
 the UI directly. These all use PySide2/Qt.

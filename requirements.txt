@@ -1,0 +1,7 @@
+tqdm
+opencv-contrib-python-headless
+skimage
+scikit-image
+memorize.py
+dlib
+PySide2

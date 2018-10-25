@@ -4,7 +4,7 @@ MODEL_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../models")
 
 # Open Images is large, so we partition by the first character of the id
 # which makes it easier to spread the data across volumes.
-# This is also how OpenImages is distributed via archives.
+# This is also how Open Images is distributed via archives.
 OPEN_IMAGES_DIR_MAP = {
  "meta": "/mnt/Apps3/datasets/open-images",
  "test": "/mnt/Apps3/datasets/open-images",

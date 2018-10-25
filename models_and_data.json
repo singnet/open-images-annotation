@@ -1,13 +1,14 @@
 {
     "model_urls": [
-        ["s3://snet-models/open-images/models/dlib_cnn_mmod_human_face_detector_v1.dat", null],
-        ["s3://snet-models/open-images/models/shape_predictor_68_face_landmarks_oi_hog_bbox_5000.dat", null]
+        ["https://snet-models.s3.amazonaws.com/open-images/models/dlib_cnn_mmod_human_face_detector_v1.dat", null],
+        ["https://snet-models.s3.amazonaws.com/open-images/models/dlib_cnn_mmod_human_face_detector_v1.dat", null],
+        ["https://snet-models.s3.amazonaws.com/open-images/models/shape_predictor_68_face_landmarks_oi_hog_bbox_5000.dat", null]
     ],
     "data_urls": [
-        ["s3://snet-models/open-images/data/face_landmarks_human.csv.bz2", null],
-        ["s3://snet-models/open-images/data/face_bbox_2018-09-25T15:58:11.csv.bz2", null],
-        ["s3://snet-models/open-images/data/face_bbox_hog_2018-10-10T19:25:49.csv.bz2", null],
-        ["s3://snet-models/open-images/data/face_landmarks_2018-09-25T15:58:11.csv.bz2", null],
-        ["s3://snet-models/open-images/data/face_landmarks_2018-10-10T19:25:49.csv.bz2", null]
+        ["https://snet-models.s3.amazonaws.com/open-images/data/face_landmarks_human.csv.bz2", null],
+        ["https://snet-models.s3.amazonaws.com/open-images/data/face_bbox_2018-09-25T15:58:11.csv.bz2", null],
+        ["https://snet-models.s3.amazonaws.com/open-images/data/face_bbox_hog_2018-10-10T19:25:49.csv.bz2", null],
+        ["https://snet-models.s3.amazonaws.com/open-images/data/face_landmarks_2018-09-25T15:58:11.csv.bz2", null],
+        ["https://snet-models.s3.amazonaws.com/open-images/data/face_landmarks_2018-10-10T19:25:49.csv.bz2", null]
     ]
 }

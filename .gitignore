@@ -1,6 +1,7 @@
 models/*.dat
 models/*.h5
 data/*.csv
+downloads/
 
 .vscode
 open_images_annotation.code-workspace

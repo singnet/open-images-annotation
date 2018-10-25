@@ -5,3 +5,4 @@ scikit-image
 memorize.py
 dlib
 PySide2
+requests

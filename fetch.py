@@ -36,12 +36,12 @@ def download_and_extract(download_dir, dest_dir, url, file_filter):
             tar = tarfile.open(local_name, "r:bz2")  
             for tar_item in tar:
                 if file_filter is None or tar_item.name in file_filter:
-                    print("Extracting %s : %s => %s" % (local_name, tar_item.name, os.path.join(model_dir, tar_item.name)))
-                    tar.extract(tar_item, path=model_dir)
+                    print("Extracting %s : %s => %s" % (local_name, tar_item.name, os.path.join(dest_dir, tar_item.name)))
+                    tar.extract(tar_item, path=dest_dir)
             tar.close()
         else:
             import bz2
-            local_name_unzip = os.path.join(model_dir, '.'.join(url.split('/')[-1].split('.')[:-1]))
+            local_name_unzip = os.path.join(dest_dir, '.'.join(url.split('/')[-1].split('.')[:-1]))
             print("Extracting %s => %s" % (local_name, local_name_unzip))
             with bz2.BZ2File(local_name) as f:
                 with open(local_name_unzip, 'wb') as dest:
@@ -51,11 +51,11 @@ def download_and_extract(download_dir, dest_dir, url, file_filter):
         zfile = ZipFile(local_name)
         for filename in zfile.namelist():
             if file_filter is None or filename in file_filter:
-                print("Extracting %s : %s => %s" % (local_name, filename, os.path.join(model_dir, filename)))
-                zfile.extract(filename, path=model_dir)
+                print("Extracting %s : %s => %s" % (local_name, filename, os.path.join(dest_dir, filename)))
+                zfile.extract(filename, path=dest_dir)
     else:
         import shutil
-        dest_local_name = os.path.join(model_dir, url.split('/')[-1])
+        dest_local_name = os.path.join(dest_dir, url.split('/')[-1])
         print("Copying %s => %s" % (local_name, dest_local_name))
         shutil.copyfile(local_name, dest_local_name)
 
@@ -81,10 +81,12 @@ if __name__ == "__main__":
     if args.models:
         pathlib.Path(os.path.join(my_path, "models")).mkdir(parents=True, exist_ok=True)
         for url, file_filter in model_urls:
+            print(url)
             model_dir = os.path.join(my_path, "models")
             download_and_extract(download_dir, model_dir, url, file_filter)
     if args.annotations:
         pathlib.Path(os.path.join(my_path, "data")).mkdir(parents=True, exist_ok=True)
-        for url, file_filter in model_urls:
+        for url, file_filter in data_urls:
+            print(url)
             data_dir = os.path.join(my_path, "data")
             download_and_extract(download_dir, data_dir, url, file_filter)

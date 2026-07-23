@@ -95,4 +95,4 @@ currently somewhat adhoc, and will be documented in detail later.
 
 ## License
 
-MIT
+[Apache 2.0](LICENSE)
